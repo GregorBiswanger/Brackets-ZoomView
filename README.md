@@ -18,9 +18,9 @@ ZoomView added a zoom indicator on the bottom left of the editor.
 
 ![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-100Percent.png?raw=true)
 
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-SelectZoom.png)
+![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-SelectZoom.png?raw=true)
 
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-150Percent.png)
+![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-150Percent.png?raw=true)
 
 Contributing
 ---
