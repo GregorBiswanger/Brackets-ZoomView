@@ -1,0 +1,12 @@
+{
+    "name": "GregorBiswanger/Brackets-ZoomView",
+    "title": "ZoomView for Brackets",
+    "description": "ZoomView added a zoom indicator on the bottom left of the editor.",
+    "homepage": "https://github.com/GregorBiswanger/Brackets-ZoomView",
+    "version": "1.0.0",
+    "author": "Gregor Biswanger <gregor.biswanger@web-enliven.de> (http://about.me/gregor.biswanger)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.24.0"
+    }
+}
