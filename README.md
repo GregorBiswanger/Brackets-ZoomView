@@ -15,7 +15,8 @@ Open Folder in Explorer `C:\Users\USERNAME\AppData\Local\Intel\XDK\xdk\brackets\
 Usage
 ---
 ZoomView added a zoom indicator on the bottom left of the editor.
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-100Percent.png)
+
+![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-100Percent.png?raw=true)
 
 ![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-SelectZoom.png)
 
