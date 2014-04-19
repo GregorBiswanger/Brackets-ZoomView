@@ -74,6 +74,10 @@ define(function (require, exports, module) {
     }
 
     AppInit.htmlReady(function () {
+        $(ViewCommandHandlers).on("fontSizeChange", function () {
+            zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
+        });
+
         $("#status-info").prepend(zoomSelect.$button);
     });
 });
