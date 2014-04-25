@@ -3,7 +3,7 @@
     "title": "ZoomView for Brackets",
     "description": "ZoomView added a zoom indicator on the bottom left of the editor.",
     "homepage": "https://github.com/GregorBiswanger/Brackets-ZoomView",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Gregor Biswanger <gregor.biswanger@web-enliven.de> (http://about.me/gregor.biswanger)",
     "license": "MIT",
     "engines": {
