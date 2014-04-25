@@ -64,7 +64,13 @@ define(function (require, exports, module) {
     });
 
     function getTitleTextFromCurrentFontSize() {
-        var fontSize = PreferencesManager.getViewState("fontSizeStyle").replace("px", "");
+        var fontSize = PreferencesManager.getViewState("fontSizeStyle");
+
+        if(fontSize){
+            fontSize = fontSize.replace("px", "");
+        } else {
+            return "100 %";
+        }
 
         return Math.round(100 / 12 * fontSize) + " %";
     }
