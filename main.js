@@ -31,48 +31,46 @@ define(function (require, exports, module) {
             return item;
         });
 
-    function initialization() {
-        zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
-        zoomSelect.items = ["20 %", "50 %", "70 %", "100 %", "150 %", "200 %", "400 %"];
-        zoomSelect.dropdownExtraClasses = "dropdown-status-bar";
-        zoomSelect.$button.css("width", "auto");
-        zoomSelect.$button.addClass("btn-status-bar");
+    zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
+    zoomSelect.items = ["20 %", "50 %", "70 %", "100 %", "150 %", "200 %", "400 %"];
+    zoomSelect.dropdownExtraClasses = "dropdown-status-bar";
+    zoomSelect.$button.css("width", "auto");
+    zoomSelect.$button.addClass("btn-status-bar");
 
-        $(zoomSelect).on("select", function (e, value, index) {
-            zoomSelect.$button.text(value);
+    $(zoomSelect).on("select", function (e, value, index) {
+        zoomSelect.$button.text(value);
 
-            try {
-                if (index == 0) {
-                    saveFontSize("2.4px");
-                } else if (index == 1) {
-                    saveFontSize("6px");
-                } else if (index == 2) {
-                    saveFontSize("8.4px");
-                } else if (index == 3) {
-                    saveFontSize("12px");
-                } else if (index == 4) {
-                    saveFontSize("18px");
-                } else if (index == 5) {
-                    saveFontSize("24px");
-                } else if (index == 6) {
-                    saveFontSize("48px");
-                }
-
-                ViewCommandHandlers.restoreFontSize();
-            } catch (error) {
-                alert(error);
+        try {
+            if (index == 0) {
+                saveFontSize("2.4px");
+            } else if (index == 1) {
+                saveFontSize("6px");
+            } else if (index == 2) {
+                saveFontSize("8.4px");
+            } else if (index == 3) {
+                saveFontSize("12px");
+            } else if (index == 4) {
+                saveFontSize("18px");
+            } else if (index == 5) {
+                saveFontSize("24px");
+            } else if (index == 6) {
+                saveFontSize("48px");
             }
-        });
 
-        $(ViewCommandHandlers).on("fontSizeChange", function () {
-            zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
-        });
-    }
+            ViewCommandHandlers.restoreFontSize();
+        } catch (error) {
+            alert(error);
+        }
+    });
+
+    $(ViewCommandHandlers).on("fontSizeChange", function () {
+        zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
+    });
 
     function getTitleTextFromCurrentFontSize() {
         var fontSize = PreferencesManager.getViewState("fontSizeStyle");
 
-        if(fontSize){
+        if (fontSize) {
             fontSize = fontSize.replace("px", "");
         } else {
             return "100 %";
@@ -86,8 +84,6 @@ define(function (require, exports, module) {
     }
 
     AppInit.htmlReady(function () {
-        initialization();
-
         $("#status-info").prepend(zoomSelect.$button);
     });
 });
