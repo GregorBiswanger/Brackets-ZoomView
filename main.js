@@ -63,10 +63,14 @@ define(function (require, exports, module) {
         }
     });
 
+    $(ViewCommandHandlers).on("fontSizeChange", function () {
+        zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
+    });
+
     function getTitleTextFromCurrentFontSize() {
         var fontSize = PreferencesManager.getViewState("fontSizeStyle");
 
-        if(fontSize){
+        if (fontSize) {
             fontSize = fontSize.replace("px", "");
         } else {
             return "100 %";
@@ -79,11 +83,7 @@ define(function (require, exports, module) {
         PreferencesManager.setViewState("fontSizeStyle", fontSizeStyle);
     }
 
-    AppInit.htmlReady(function () {
-        $(ViewCommandHandlers).on("fontSizeChange", function () {
-            zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
-        });
-
+    AppInit.appReady(function () {
         $("#status-info").prepend(zoomSelect.$button);
     });
 });
