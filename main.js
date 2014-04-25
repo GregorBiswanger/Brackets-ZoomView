@@ -83,7 +83,7 @@ define(function (require, exports, module) {
         PreferencesManager.setViewState("fontSizeStyle", fontSizeStyle);
     }
 
-    AppInit.htmlReady(function () {
+    AppInit.appReady(function () {
         $("#status-info").prepend(zoomSelect.$button);
     });
 });
