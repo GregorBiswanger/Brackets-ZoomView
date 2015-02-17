@@ -16,7 +16,7 @@ ZoomView added a zoom indicator on the bottom left of the editor.
 
 Blog posts
 ---
-[Useful @Brackets extensions for Web Developers](http://blog.alexonasp.net/post/2014/05/02/Useful-Brackets-extensions-Web-Developers.aspx).
+[Useful @Brackets extensions for Web Developers](https://alexanderzeitler.com/articles/Useful-@Brackets-extensions-for-Web-Developers/).
 
 Contributing
 ---
