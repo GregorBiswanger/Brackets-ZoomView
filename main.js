@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2014 Gregor Biswanger. All rights reserved.
+ * Copyright (c) 2015 Gregor Biswanger. All rights reserved.
+ * http://about.me/gregor.biswanger
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -41,35 +42,37 @@ define(function (require, exports, module) {
         zoomSelect.$button.text(value);
 
         try {
-            if (index == 0) {
-                saveFontSize("2.4px");
-            } else if (index == 1) {
-                saveFontSize("6px");
-            } else if (index == 2) {
-                saveFontSize("8.4px");
-            } else if (index == 3) {
-                saveFontSize("12px");
-            } else if (index == 4) {
-                saveFontSize("18px");
-            } else if (index == 5) {
-                saveFontSize("24px");
-            } else if (index == 6) {
-                saveFontSize("48px");
+            var fontSize = "12px";
+
+            if (index === 0) {
+                fontSize = "2.4px";
+            } else if (index === 1) {
+                fontSize = "6px";
+            } else if (index === 2) {
+                fontSize = "8.4px";
+            } else if (index === 3) {
+                fontSize = "12px";
+            } else if (index === 4) {
+                fontSize = "18px";
+            } else if (index === 5) {
+                fontSize = "24px";
+            } else if (index === 6) {
+                fontSize = "48px";
             }
 
-            ViewCommandHandlers.restoreFontSize();
+            saveFontSize(fontSize);
+            setButtonText(fontSize);
         } catch (error) {
             alert(error);
         }
     });
 
     $(ViewCommandHandlers).on("fontSizeChange", function () {
-        zoomSelect.$button.text(getTitleTextFromCurrentFontSize());
+        var fontSize = ViewCommandHandlers.getFontSize();
+        setButtonText(fontSize);
     });
 
-    function getTitleTextFromCurrentFontSize() {
-        var fontSize = PreferencesManager.getViewState("fontSizeStyle");
-
+    function getTitleTextFromCurrentFontSize(fontSize) {
         if (fontSize) {
             fontSize = fontSize.replace("px", "");
         } else {
@@ -79,8 +82,12 @@ define(function (require, exports, module) {
         return Math.round(100 / 12 * fontSize) + " %";
     }
 
-    function saveFontSize(fontSizeStyle) {
-        PreferencesManager.setViewState("fontSizeStyle", fontSizeStyle);
+    function setButtonText(fontSize) {
+        zoomSelect.$button.text(getTitleTextFromCurrentFontSize(fontSize));
+    }
+
+    function saveFontSize(fontSize) {
+        ViewCommandHandlers.setFontSize(fontSize);
     }
 
     AppInit.appReady(function () {

@@ -3,24 +3,15 @@ ZoomView for Brackets
 
 Installation
 ---
-### Quick Install for Brackets
-`File > Install Extension...` and paste `https://github.com/GregorBiswanger/Brackets-ZoomView`. Refresh Brackets (F5).
-
-### Quick Install for Brackets into Intel XDK (Windows)
-Open Folder in Explorer `C:\Users\USERNAME\AppData\Local\Intel\XDK\xdk\brackets\dist\extensions\default` and paste `https://github.com/GregorBiswanger/Brackets-ZoomView`. Restart Brackets.
-
-### Download
-[Download the ZIP](https://github.com/GregorBiswanger/Brackets-ZoomView/archive/master.zip).
+### Quick Install for Brackets or Brackets into Intel XDK
+`File > Extension Manager...` and install "ZoomView".
+![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-Install.png?raw=true)
 
 Usage
 ---
 ZoomView added a zoom indicator on the bottom left of the editor.
 
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-100Percent.png?raw=true)
-
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-SelectZoom.png?raw=true)
-
-![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView-150Percent.png?raw=true)
+![ZoomView Screenshot](https://github.com/GregorBiswanger/Brackets-ZoomView/blob/master/screenshots/ZoomView.gif?raw=true)
 
 
 Blog posts
